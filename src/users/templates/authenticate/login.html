@@ -1,19 +1,15 @@
-<h1>Login</h1>
+<h1>Login Page</h1>
 
 
 <form action="" method="POST">
-    { % csrf_token % }
-</form>
-    <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Enter username">
-    </div>
-    <br>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" name="password" placeholder="Password">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
 
+    <form method="POST" autocomplete="off">
+        {% csrf_token %}
+
+        {{loginform.as_p}}
+
+        <input type="submit" value="Login">
+    </form>
+</form>
 
     
